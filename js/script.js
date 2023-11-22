@@ -6,13 +6,12 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 // creo variabile button                        OKAY
 const buttonClick = document.querySelector('button');
 
-// do padre al figlio nel ciclo for             OKAY
+// creo variabile per dare padre al figlio nel ciclo for             OKAY
 const mainContentEl = document.querySelector('.wrapper');
  
-// richiamo il button al click                 !!!!!!!!!! MEZZO OKAY!!!!!!!!!
-// li crea, 100 ogni volta e NON VA BENE 
+// richiamo il button al click                 OKAY
 buttonClick.addEventListener('click', function(){
-    // svuoto la riga per non ripeterlo a ogni click
+    // prima di ricrearle, svuoto la riga per non ripeterlo a ogni click
     mainContentEl.innerHTML = '';
     // creo ciclo di 100 numeri
     for (let i= 1; i <=100; i++){
@@ -23,7 +22,7 @@ buttonClick.addEventListener('click', function(){
         currentSquare.innerHTML += `<span> ${squareContent} </span>`;
         // apro altro click, quando clicco su cella, si colora DA INSERIRE NEL FOR ALTRIMENTI NON FUNZIONA
         currentSquare.addEventListener('click', function(){
-        currentSquare.classList.toggle('blue')
+        currentSquare.classList.add('blue')
         console.log(squareContent)
         });
     }
