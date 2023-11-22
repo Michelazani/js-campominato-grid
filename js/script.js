@@ -12,6 +12,8 @@ const mainContentEl = document.querySelector('.wrapper');
 // richiamo il button al click                 !!!!!!!!!! MEZZO OKAY!!!!!!!!!
 // li crea, 100 ogni volta e NON VA BENE 
 buttonClick.addEventListener('click', function(){
+    // svuoto la riga per non ripeterlo a ogni click
+    mainContentEl.innerHTML = '';
     // creo ciclo di 100 numeri
     for (let i= 1; i <=100; i++){
         const currentSquare = newSquare();
